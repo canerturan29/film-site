@@ -1,0 +1,14 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer a {
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: rgb(59, 164, 224);
+
+}
