@@ -5,17 +5,17 @@ import FeaturedMovie from '@/components/Featured-Movie'
 import Categories from '@/components/Categories'
 import MoviesSection from '@/components/Movies-Sections'
 
-function HomeContainer({ selectedCategory }) {
+function HomeContainer({ topRatedMovies = [], popularMovies = [], categories = [], selectedCategory }) {
     return (
         <div>
-            <FeaturedMovie movie={Movies.results[0]} />
-            <Categories categories={Genres.genres.slice(0, 5)} />
+            <FeaturedMovie movie={topRatedMovies?.[0]} />
+            <Categories categories={categories.slice(0, 5)} />
             {selectedCategory.movies?.length > 0 &&
-                (<MoviesSection title={Genres.genres.find(genre => `${genre.id}` === selectedCategory.id).name} movies={selectedCategory.movies} />)
+                (<MoviesSection title={categories.find(genre => `${genre.id}` === selectedCategory.id).name} movies={selectedCategory.movies} />)
 
             }
-            <MoviesSection title="Populer Films" movies={Movies.results.slice(1, 7)} />
-            <MoviesSection title="Your Favorites" movies={Movies.results.slice(7, 13)} />
+            <MoviesSection title="Populer Films" movies={topRatedMovies.slice(1, 7)} />
+            <MoviesSection title="Your Favorites" movies={popularMovies.slice(7, 13)} />
         </div>
     )
 }
