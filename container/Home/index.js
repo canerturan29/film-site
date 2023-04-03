@@ -10,7 +10,7 @@ function HomeContainer({ topRatedMovies = [], popularMovies = [], categories = [
             <FeaturedMovie movie={topRatedMovies?.[0]} />
             <Categories categories={categories.slice(0, 5)} />
             {selectedCategory.movies?.length > 0 &&
-                (<MoviesSection title={categories.filter(genre => `${genre.id}` === selectedCategory.id).name} movies={selectedCategory.movies} />)
+                (<MoviesSection title={categories.find(genre => `${genre.id}` === selectedCategory.id).name} movies={selectedCategory.movies} />)
 
             }
             <MoviesSection title="Populer Films" movies={topRatedMovies.slice(1, 7)} />
