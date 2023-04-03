@@ -6,7 +6,7 @@ function Header() {
     return (
         <header className={`${Styles.header} container fluid`}>
             <div className={Styles.headerWrapper}>
-                <Link href="https://herfilms.vercel.app/" className={Styles.logo}>
+                <Link href="/" className={Styles.logo}>
                     <FaPlayCircle />HERFILMS
                 </Link>
                 <nav className={Styles.navigationMenu}>
