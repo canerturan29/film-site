@@ -3,7 +3,8 @@ import {
     getTopRatedMovies,
     getPopularMovies,
     getCategories,
-    getSingleCategory
+    getSingleCategory,
+    getMovieVideo
 } from "@/services/movie"
 
 
@@ -15,15 +16,18 @@ export default async function Home({ params }) {
 
 
 
+
     const [{ results: topRatedMovies }, { results: popularMovies }, { genres: categories }]
         = await Promise.all([getTopRatedMovies(), getPopularMovies(), getCategories()])
 
     if (params.category?.length > 0) {
         const { results } = await getSingleCategory(params.category[0])
+
         selectedCategory = results
     }
     return (
         <HomeContainer
+
             topRatedMovies={topRatedMovies}
             popularMovies={popularMovies}
             categories={categories}

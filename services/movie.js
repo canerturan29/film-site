@@ -30,11 +30,15 @@ const getMovie = async (movieId) => {
     return fetchMovieApi(`/movie/${movieId}`,)
 
 }
+const getMovieVideo = async (movieId) => {
+    return fetchMovieApi(`/movie/${movieId}`, "append_to_response=videos")
+}
 export {
     fetchMovieApi,
     getTopRatedMovies,
     getPopularMovies,
     getCategories,
     getSingleCategory,
-    getMovie
+    getMovie,
+    getMovieVideo
 }

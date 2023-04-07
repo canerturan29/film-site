@@ -4,7 +4,7 @@ import FeaturedMovie from '@/components/Featured-Movie'
 import Categories from '@/components/Categories'
 import MoviesSection from '@/components/Movies-Sections'
 
-function HomeContainer({ topRatedMovies = [], popularMovies = [], categories = [], selectedCategory }) {
+function HomeContainer({ topRatedMovies = [], popularMovies = [], categories = [], selectedCategory, }) {
 
     return (
         <div>
