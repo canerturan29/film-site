@@ -9,12 +9,7 @@ function Header() {
                 <Link href="/" className={Styles.logo}>
                     <FaPlayCircle />HERFILMS
                 </Link>
-                <nav className={Styles.navigationMenu}>
-                    <Link href="/">Movies</Link>
-                    <Link href="/">Series</Link>
-                    <Link href="/">Kids</Link>
 
-                </nav>
             </div>
         </header>
 

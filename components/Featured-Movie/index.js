@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaPlus } from "react-icons/fa";
 import Youtube from "../Youtube";
 
 import styles from "./styles.module.css";
@@ -29,9 +28,7 @@ function FeaturedMovie({ movie = {}, videoTrailer = {}, isCompact = true }) {
                 <Link className={styles.playButton} href={`/movie/${movie.id}`} onClick={handleShow}>
                     Play Trailer
                 </Link>
-                <button className={styles.addButton}>
-                    <FaPlus />
-                </button>
+
             </div>
             <div className={styles.moviePoster}>
                 <div className={styles.moviePosterOverlay}></div>
